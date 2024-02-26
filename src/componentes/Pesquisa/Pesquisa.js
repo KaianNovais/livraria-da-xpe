@@ -63,7 +63,7 @@ const Pesquisa = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:8000/livros/titulo/${termoBusca}`);
+      const response = await fetch(`http://localhost:8080/livros/titulo/${termoBusca}`);
       const data = await response.json();
       setLivros(Array.isArray(data) ? data : [data]); // Adapte conforme a estrutura de dados da sua API
       setTermoBusca(''); // Limpa o termo de busca após a submissão

@@ -70,7 +70,7 @@ const MaisBuscados = () => {
   useEffect(() => {
     const buscarLivros = async () => {
       try {
-        const resposta = await fetch('http://localhost:8000/livros');
+        const resposta = await fetch('http://localhost:8080/livros');
         const dados = await resposta.json();
         setLivros(dados);
       } catch (error) {
